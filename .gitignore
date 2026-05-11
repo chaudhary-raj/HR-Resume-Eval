@@ -1,0 +1,8 @@
+# Ignore environment variables
+.env
+venv
+# Ignore the local Chroma vector database folder
+candidate_vector_db/
+
+# Ignore Python cache
+__pycache__/

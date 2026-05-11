@@ -1,0 +1,9 @@
+streamlit
+pandas
+pydantic
+langchain
+langchain-community
+langchain_google_genai
+chromadb
+pymupdf
+python-dotenv
