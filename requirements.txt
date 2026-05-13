@@ -10,3 +10,4 @@ pymupdf
 python-dotenv
 python-docx
 sentence-transformers
+protobuf==4.25.1
