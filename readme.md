@@ -218,11 +218,11 @@ To modify the theme, edit `style.css` and reload the app.
 
 | Dimension | Weight | 1–2 | 3–4 | 5–6 | 7–8 | 9–10 |
 |-----------|--------|-----|-----|-----|-----|------|
-| **Skills Match** (30%) | < 20% overlap | 20–40% overlap | 40–60% overlap | 60–80% overlap | > 80% overlap |
-| **Experience** (25%) | Unrelated | Slightly adjacent (internship, tangential) | Relevant but junior | Good match & solid seniority | Exact domain + required seniority |
-| **Education** (15%) | Far below minimum | Partially meets (wrong field or level) | Meets minimum requirement | Meets + relevant certifications | Exceeds significantly (advanced degree, top-tier) |
-| **Projects** (20%) | No evidence | Weak / academic-only, unrelated stack | Generic projects, some tech overlap | Relevant with decent stack alignment | Strong production-grade, exact stack match |
-| **Communication** (10%) | Poor grammar, unclear | Below average, awkward phrasing | Adequate, minor issues | Good structure, clarity, professional tone | Crisp, impactful, polished writing |
+| **Skills Match** |(30%) | < 20% overlap | 20–40% overlap | 40–60% overlap | 60–80% overlap | > 80% overlap |
+| **Experience** |(25%) | Unrelated | Slightly adjacent (internship, tangential) | Relevant but junior | Good match & solid seniority | Exact domain + required seniority |
+| **Education** |(15%) | Far below minimum | Partially meets (wrong field or level) | Meets minimum requirement | Meets + relevant certifications | Exceeds significantly (advanced degree, top-tier) |
+| **Projects** |(20%) | No evidence | Weak / academic-only, unrelated stack | Generic projects, some tech overlap | Relevant with decent stack alignment | Strong production-grade, exact stack match |
+| **Communication** | (10%) | Poor grammar, unclear | Below average, awkward phrasing | Adequate, minor issues | Good structure, clarity, professional tone | Crisp, impactful, polished writing |
 
 **Final Score** = Weighted sum of all dimensions (1–10 scale)
 
