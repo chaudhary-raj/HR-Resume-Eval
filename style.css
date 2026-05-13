@@ -1,0 +1,533 @@
+/* =========================================================
+   STREAMLIT UI MODERN THEME
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. BASE APP & TYPOGRAPHY
+   --------------------------------------------------------- */
+.stApp {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1a1a2e;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #16213e !important;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.8rem !important; margin-bottom: 0.5em !important; }
+h2 { font-size: 2rem !important; margin-bottom: 0.4em !important; }
+h3 { font-size: 1.5rem !important; margin-bottom: 0.3em !important; }
+
+/* Markdown text */
+.stMarkdown {
+    color: #1a1a2e !important;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.stMarkdown p, .stMarkdown li, .stMarkdown span {
+    color: #1a1a2e !important;
+}
+
+.stMarkdown strong {
+    color: #0f3460 !important;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   2. FORMS & INPUTS
+   --------------------------------------------------------- */
+/* Labels */
+label, .stRadio label, .stCheckbox label, .stMultiSelect label {
+    color: #2d2e2f !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+/* Captions & help text */
+[data-testid="stCaptionContainer"], .stCaption {
+    color: #2d2e2f !important;
+    font-size: 13px;
+}
+
+/* Text Area */
+textarea {
+    border-radius: 14px !important;
+    border: 1.5px solid #d1d9e6 !important;
+    padding: 14px !important;
+    font-size: 15px !important;
+    color: #262636 !important; 
+    caret-color: #4361ee !important;  
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+textarea:focus {
+    border-color: #4361ee !important;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15) !important;
+}
+
+/* Text Input */
+input[type="text"], input[type="number"], input[type="password"] {
+    border-radius: 12px !important;
+    border: 1.5px solid #d1d9e6 !important;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    color :#262636 !important;
+    transition: all 0.2s ease !important;
+}
+
+input:focus {
+    border-color: #4361ee !important;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15) !important;
+}
+
+/* Placeholders */
+::placeholder {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+    font-size: 14px;
+}
+
+/* Select Box */
+div[data-baseweb="select"] {
+    border-radius: 12px;
+}
+
+div[data-baseweb="select"] > div {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: #d1d9e6 !important;
+}
+
+/* File Uploader */
+[data-testid="stFileUploader"] {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 24px;
+    border-radius: 16px;
+    border: 2px dashed #4361ee;
+    transition: all 0.3s ease;
+    color :#94a3b8;
+}
+
+[data-testid="stFileUploader"]:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #3a0ca3;
+}
+
+/* ---------------------------------------------------------
+   3. BUTTONS
+   --------------------------------------------------------- */
+.stButton > button {
+    width: 100%;
+    border-radius: 14px;
+    height: 3.2em;
+    border: none;
+    background: linear-gradient(90deg, #4361ee, #3a0ca3);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.25);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(67, 97, 238, 0.35);
+    background: linear-gradient(90deg, #3a0ca3, #4361ee);
+}
+
+.stButton > button:active {
+    transform: translateY(0px);
+}
+
+/* Download Button */
+.stDownloadButton > button {
+    width: 100%;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #06d6a0, #118ab2);
+    color: #ffffff !important;
+    font-weight: 600;
+    height: 3em;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(6, 214, 160, 0.25);
+}
+
+.stDownloadButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(6, 214, 160, 0.35);
+}
+
+/* ---------------------------------------------------------
+   4. GLASSMORPHISM CARDS & CONTAINERS
+   --------------------------------------------------------- */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Glass effect containers */
+div[data-testid="stContainer"] {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 18px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 2px 4px -1px rgba(0, 0, 0, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+div[data-testid="stContainer"]:hover {
+    box-shadow: 
+        0 20px 25px -5px rgba(0, 0, 0, 0.08),
+        0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+/* Metric Cards */
+[data-testid="metric-container"] {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s ease;
+}
+
+[data-testid="metric-container"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-testid="metric-container"] label {
+    color: #64748b !important;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+[data-testid="metric-container"] .metric-value {
+    color: #16213e !important;
+    font-weight: 700 !important;
+}
+
+/* ---------------------------------------------------------
+   5. SIDEBAR
+   --------------------------------------------------------- */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+section[data-testid="stSidebar"] * {
+    color: #e2e8f0 !important;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
+}
+
+section[data-testid="stSidebar"] .stButton > button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+}
+
+section[data-testid="stSidebar"] .stButton > button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* =========================================================
+   HUMAN-IN-THE-LOOP (HITL) OVERRIDE PANEL
+   ========================================================= */
+
+/* Main glass panel with amber authority accent */
+.hitl-panel div[data-testid="stContainer"] {
+    background: rgba(255, 251, 235, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 6px solid #f59e0b;
+    box-shadow: 
+        0 10px 25px -5px rgba(245, 158, 11, 0.1),
+        0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hitl-panel div[data-testid="stContainer"]:hover {
+    box-shadow: 
+        0 20px 30px -5px rgba(245, 158, 11, 0.15),
+        0 10px 15px -6px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* Subheader: ⚖️ Step 3 */
+.hitl-panel h3 {
+    color: #92400e !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.4rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Description text under subheader */
+.hitl-panel .stMarkdown p {
+    color: #78350f !important;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1.2rem !important;
+}
+
+/* Column layout */
+.hitl-panel div[data-testid="stHorizontalBlock"] {
+    gap: 1.2rem !important;
+    align-items: flex-end !important;
+}
+
+/* Labels inside HITL */
+.hitl-panel label {
+    color: #78350f !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px !important;
+}
+
+/* Select boxes - warm border */
+.hitl-panel div[data-baseweb="select"] {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 12px !important;
+    border: 1.5px solid #fed7aa !important;
+}
+
+.hitl-panel div[data-baseweb="select"]:hover {
+    border-color: #fbbf24 !important;
+}
+
+/* Override Reason Input - prominent amber focus */
+.hitl-panel input[type="text"] {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid #fed7aa !important;
+    border-radius: 12px !important;
+    color: #262636 !important;
+    font-weight: 500;
+    padding: 10px 14px !important;
+    transition: all 0.2s ease;
+}
+
+.hitl-panel input[type="text"]:focus {
+    border-color: #f59e0b !important;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15) !important;
+    outline: none !important;
+}
+
+/* Placeholder in HITL */
+.hitl-panel input::placeholder {
+    color: #d97706 !important;
+    opacity: 0.6 !important;
+    font-style: italic;
+}
+
+/* Apply Manual Override Button - Authority Gold */
+.hitl-panel .stButton > button {
+    width: 100%;
+    border-radius: 14px;
+    height: 3.2em;
+    border: none;
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hitl-panel .stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+    background: linear-gradient(90deg, #d97706, #b45309);
+}
+
+.hitl-panel .stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Warning - Amber themed */
+.hitl-panel .stWarning {
+    background-color: rgba(251, 191, 36, 0.12) !important;
+    border-left: 4px solid #f59e0b !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+}
+
+.hitl-panel .stWarning p {
+    color: #92400e !important;
+    font-weight: 500 !important;
+}
+
+/* Success - Green themed */
+.hitl-panel .stSuccess {
+    background-color: rgba(16, 185, 129, 0.12) !important;
+    border-left: 4px solid #10b981 !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+}
+
+.hitl-panel .stSuccess p {
+    color: #065f46 !important;
+    font-weight: 600 !important;
+}
+
+/* ---------------------------------------------------------
+   6. DATA & TABLES
+   --------------------------------------------------------- */
+.stDataFrame {
+    background-color: white;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.stDataFrame th {
+    background-color: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.stDataFrame td {
+    color: #334155 !important;
+    font-size: 14px;
+}
+
+/* ---------------------------------------------------------
+   7. ALERTS & FEEDBACK
+   --------------------------------------------------------- */
+.stAlert {
+    border-radius: 14px !important;
+    border: none !important;
+    padding: 16px !important;
+}
+
+.stSuccess {
+    background-color: rgba(6, 214, 160, 0.15) !important;
+    border-left: 4px solid #06d6a0 !important;
+}
+
+.stSuccess p { color: #047857 !important; }
+
+.stInfo {
+    background-color: rgba(67, 97, 238, 0.1) !important;
+    border-left: 4px solid #4361ee !important;
+}
+
+.stInfo p { color: #1e40af !important; }
+
+.stWarning {
+    background-color: rgba(255, 183, 77, 0.15) !important;
+    border-left: 4px solid #ffb74d !important;
+}
+
+.stWarning p { color: #b45309 !important; }
+
+.stError {
+    background-color: rgba(239, 83, 80, 0.1) !important;
+    border-left: 4px solid #ef5350 !important;
+}
+
+.stError p { color: #991b1b !important; }
+
+/* ---------------------------------------------------------
+   8. PROGRESS & STATUS
+   --------------------------------------------------------- */
+.stProgress > div > div > div > div {
+    background: linear-gradient(90deg, #4361ee, #4cc9f0) !important;
+    border-radius: 10px;
+}
+
+/* Spinner */
+.stSpinner > div {
+    border-top-color: #4361ee !important;
+}
+
+/* ---------------------------------------------------------
+   9. SCROLLBAR
+   --------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ---------------------------------------------------------
+   10. ANIMATIONS
+   --------------------------------------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main .block-container {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Targeted transitions only (performance) */
+button, 
+div[data-testid="stContainer"], 
+[data-testid="metric-container"],
+textarea, 
+input {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.streamlit-expanderContent {
+    background: transparent !important;
+}
