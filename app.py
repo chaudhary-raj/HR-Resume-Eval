@@ -139,13 +139,25 @@ def evaluate_candidate(resume_data: ResumeData, parsed_jd: ParsedJD, vector_stor
         context_text = "No historical context found or DB missing."
 
     rubric = """
-    Scoring Rubric (Scale of 0 to 10):
-    1. Skills Match (30%): 0 (<30%), 5 (50-70%), 10 (>85%)
-    2. Experience (25%): 0 (Unrelated), 5 (Adjacent), 10 (Exact domain & seniority)
-    3. Education (15%): 0 (Does not meet), 5 (Meets min), 10 (Exceeds)
-    4. Projects (20%): 0 (No evidence), 5 (Generic), 10 (Strong relevant - check project tech stacks against JD)
-    5. Communication (10%): 0 (Poor grammar), 5 (Adequate), 10 (Crisp, impactful)
-    """
+Scoring Rubric (Scale of 1 to 10):
+
+1. Skills Match (30%):
+   1-2: <20% overlap | 3-4: 20-40% | 5-6: 40-60% | 7-8: 60-80% | 9-10: >80%
+
+2. Experience Relevance (25%):
+   1-2: Unrelated | 3-4: Adjacent/internship | 5-6: Relevant but junior | 7-8: Good match & seniority | 9-10: Exact domain + seniority
+
+3. Education & Certs (15%):
+   1-2: Far below | 3-4: Partially meets | 5-6: Meets minimum | 7-8: Meets + relevant certs | 9-10: Exceeds significantly
+
+4. Project Portfolio (20%):
+   1-2: No evidence | 3-4: Weak/academic only | 5-6: Generic, some overlap | 7-8: Relevant with decent stack | 9-10: Strong production-grade, exact stack match
+
+5. Communication Quality (10%):
+   1-2: Poor grammar | 3-4: Below average | 5-6: Adequate | 7-8: Good clarity | 9-10: Crisp & impactful
+
+Return a score of 1-10 for each dimension with a one-line justification.
+"""
 
     evaluator_llm = llm.with_structured_output(CandidateEvaluation)
     eval_prompt = ChatPromptTemplate.from_messages([
